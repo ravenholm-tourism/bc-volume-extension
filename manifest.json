@@ -1,0 +1,17 @@
+{
+  "name": "Bandcamp Tracklist Fixer and Volume Slider",
+  "description": "Move tracklist below player on bandcamp and adds a volume slider.",
+  "version": "1.0",
+  "manifest_version": 3,
+    "icons": {
+    "16": "images/icon-16.png",
+    "32": "images/icon-32.png",
+    "128": "images/icon-128.png"
+  },
+  "content_scripts": [{
+    "js": ["js/move-tracklist.js", "js/inject-volume.js"],
+    "css": ["css/styles.css"],
+    "matches": ["*://*.bandcamp.com/*"],
+    "run_at": "document_idle"
+  }]
+}
